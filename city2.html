@@ -1,0 +1,42 @@
+<!-- This is the result I got from ChatGPT when my button didn't work right. Not sure what I did wrong. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Guessing Game</title>
+    <script>
+        let oops = 0;
+        let found = 0;
+
+        function checkCity() {
+            let secret = document.getElementById("secret").value;
+            let guess = document.getElementById("guess").value;
+            
+            if (guess === secret) {
+                found++;
+                alert("GotCha");
+            } else {
+                oops++;
+                alert("Awe");
+            }
+            
+            document.getElementById("result").innerHTML = `Oops: ${oops}, Found: ${found}`;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="secret">Where in the world:</label>
+        <input type="password" id="secret" value="San Diego" readonly>
+        <br><br>
+        <label for="guess">Guess the city:</label>
+        <input type="text" id="guess">
+        <br><br>
+        <button type="button" onclick="checkCity()">Check the guess</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>

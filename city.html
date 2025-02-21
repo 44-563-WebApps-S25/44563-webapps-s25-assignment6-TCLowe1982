@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SimpleCity. City game by Thomas Lowe</title>
+    </head>
+ 
+<body>
+
+<h2>City Guessing Game</h2>
+
+<form>
+    <label>Where in the world? </label>
+    <br>
+
+    <label for="city_guess">Guess the city: </label>
+    <input type ="text" id="city_guess"> <br>
+
+    <button type="button" onclick="checkCity()">Check the Guess </button>
+    
+</form>
+
+
+<p id="result">Check the guess</p>
+
+<script> 
+
+    let oops = 0;
+    let found = 0;
+
+function checkCity ()
+{
+//Do you know how much I hate string refrences? Probably not, but they are the bane of my existence. Especially without auto complte. Typo in 'complete' left in to demonstrate point
+    const secret = "San Diego"
+    let guess = document.getElementById("city_guess").value;
+    if (guess === secret)
+    {
+        found++;
+        alert("GotCha!");
+
+    }
+    else
+    {
+        oops++
+        alert("awww...");
+    }
+
+    document.getElementById("result").innerHTML = `Oops: ${oops}, Found: ${found}`;
+    
+
+
+}
+</script>
+
+</body>
+</html> 
