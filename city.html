@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>SimpleCity. City game by Thomas Lowe</title>
+        <link rel="stylesheet" href="style.css">
     </head>
  
 <body>
@@ -45,11 +46,33 @@ function checkCity ()
     }
 
     document.getElementById("result").innerHTML = `Oops: ${oops}, Found: ${found}`;
+
+    let img = document.getElementById("cat-1151519_1280.jpg")
+    let value1 = document.getElementById("bird-3689510_1280.jpg")
+    let value2 = document,getElementById("weasel-3352109_1280.jpg")
+    var usePick = value1
+    
+    img.onclick = function updatePic(image) 
+    {
+        image = img
+        let imageCollection = [img, value1, value2]
+        for (i = 0; i<imageCollection.length; i++)
+        {
+            image = i
+        }
+
+        
+    }
     
 
 
 }
 </script>
+
+<div>
+    <img src="cat-1151519_1280.jpg" alt="A cat">
+    
+</div>
 
 </body>
 </html> 
