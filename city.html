@@ -52,14 +52,34 @@ function checkCity ()
     let value2 = document,getElementById("weasel-3352109_1280.jpg")
     var usePick = value1
     
-    img.onclick = function updatePic(image) 
+    img.onclick = function updatePic(img) 
     {
+        /*      
+        My first attempt at wrting a function to change the picture. Kept mostly for refrence purposes.
         image = img
         let imageCollection = [img, value1, value2]
         for (i = 0; i<imageCollection.length; i++)
         {
             image = i
-        }
+        } 
+            
+        After this didn't work, I went back and read the instructions.
+        */
+       switch (usePick) 
+       {
+        case value1:
+            
+            img = document.getElementById("bird-3689510_1280.jpg")
+            
+
+            break;
+        
+       
+        default:
+
+            break;
+        case value2:arguments
+       }
 
         
     }
