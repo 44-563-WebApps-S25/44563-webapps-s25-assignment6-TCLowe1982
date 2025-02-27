@@ -9,6 +9,21 @@
 <h2>Thomas Lowe plans diner</h2>
 
 <form>
+    <label for="serveWine">Serve wine</label>
+    <input type="checkbox" id="serveWine" name="serveWine" value="True"> <br>
+
+    <label for="eatOutside">Eat outside</label>
+    <input type="checkbox" id="eatOutside" name="eatOutside" value="True"> <br>
+
+    <label for="lightCandles">Light candles</label>
+    <input type="checkbox" id="lightCandles" name="lightCandles" value="False"> <br>
+
+    <input type="button" onclick="choices()" value="Dinner Choices">
+</form>
+
+<p id="choicesResult">Choices will be displayed here</p>
+
+<!-- <form>
     <label for="form1_age">What is your age </label>
     <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
 
@@ -20,10 +35,27 @@
 
 
 <p id="result">This text will be replaced </p>
-
+ -->
 <script> 
 
-function resolveForm (){
+function choices()
+{
+    
+    window.my_dinner = {};
+
+    
+    my_dinner = {};
+
+    
+    my_dinner.wine = document.getElementById("serveWine").checked;
+    my_dinner.outside = document.getElementById("eatOutside").checked;
+    my_dinner.candel = document.getElementById("lightCandles").checked;
+
+    
+    document.getElementById("choicesResult").innerHTML = JSON.stringify(my_dinner);
+}
+
+/* function resolveForm (){
     console.log("Getting form values")
     age = document.getElementById("form1_age").value
     nick = document.getElementById("form1_nick").value
@@ -35,8 +67,8 @@ function resolveForm (){
     } else {
         out.innerHTML = "Values were not confirmed"
     }
-}
+} */
 </script>
 
 </body>
-</html> 
+</html>
