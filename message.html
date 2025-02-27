@@ -3,20 +3,7 @@
 
 <title>Thomas Lowe message cost</title>
 <body>
-<!-- 
-<h2>Getting input</h2>
 
-<form>
-    <label for="form1_age">What is your age </label>
-    <input type="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
-
-    <label for="form1_nick">What is your nickname </label>
-    <input type="text" id="form1_nick" name="form1_nick" autofocus> <br>
-
-    <input type="button" onclick="resolveForm()" value="Get values from form">
-</form>
-
-<p id="result">This text will be replaced </p> -->
 
 <h2>Calculate Message Cost</h2>
 
@@ -36,19 +23,6 @@
 <p id="costResult">Totals will be displayed here</p>
 
 <script>
-/* function resolveForm() {
-    console.log("Getting form values")
-    age = document.getElementById("form1_age").value
-    nick = document.getElementById("form1_nick").value
-    confirmed = confirm("Are these the values? " + age + " and " + nick)
-    
-    out = document.getElementById("result")
-    if (confirmed) {
-        out.innerHTML = "Values were confirmed"
-    } else {
-        out.innerHTML = "Values were not confirmed"
-    }
-} */
 
 function amounts() 
 {
@@ -75,6 +49,28 @@ function amounts()
     }
 
     document.getElementById("costResult").innerHTML = "Totals are: " + myResults;
+
+    function chooseOp() 
+    {
+    let basicPrice = parseFloat(document.getElementById("basicprice").value);
+    let breakAt = parseInt(document.getElementById("breakAt").value);
+    let operationResult = "";
+
+    if (document.getElementById("product").checked) 
+        {
+            operationResult = `${basicPrice} * ${breakAt} = ${basicPrice * breakAt}`;
+        } 
+        else if (document.getElementById("sum").checked) 
+        {
+            operationResult = `${basicPrice} + ${breakAt} = ${basicPrice + breakAt}`;
+        } 
+        else if (document.getElementById("mod").checked) 
+        {
+            operationResult = `${basicPrice} % ${breakAt} = ${basicPrice % breakAt}`;
+        }
+
+    document.getElementById("operationResult").innerHTML = "Operation result: " + operationResult;
+    }
 }
 </script>
 
