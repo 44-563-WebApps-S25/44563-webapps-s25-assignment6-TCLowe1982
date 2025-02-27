@@ -2,3 +2,8 @@
 # WebApps-S25-Assignment-6
 Introduction to Java Script and DOM
 
+Hosted at [GitHub](https://github.com/44-563-WebApps-S25/44563-webapps-s25-assignment6-TCLowe1982)
+[City Game](https://github.com/44-563-WebApps-S25/44563-webapps-s25-assignment6-TCLowe1982/blob/main/city.html)
+[Message Cost Calculator](https://github.com/44-563-WebApps-S25/44563-webapps-s25-assignment6-TCLowe1982/blob/main/message.html)
+[Diner] (https://github.com/44-563-WebApps-S25/44563-webapps-s25-assignment6-TCLowe1982/blob/main/diner.html)
+
