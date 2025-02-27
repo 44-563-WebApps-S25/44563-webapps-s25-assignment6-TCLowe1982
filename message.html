@@ -31,6 +31,8 @@
     <label for="sum">Sum</label><br>
     <input type="radio" id="mod" name="operation" value="mod" onclick="chooseOp()">
     <label for="mod">Mod</label><br>
+    <input type="radio" id="original" name="operation" value="original" onclick="chooseOp()">
+    <label for="original">Original Calculation</label><br>
 </form>
 
 <p id="operationResult">Operation result will be displayed here</p>
@@ -82,6 +84,11 @@ function chooseOp()
     else if (document.getElementById("mod").checked) 
     {
         operationResult = `${basicPrice} % ${breakAt} = ${basicPrice % breakAt}`;
+    }
+    else if (document.getElementById("original").checked) 
+    {
+        amounts();
+        return;
     }
 
     document.getElementById("operationResult").innerHTML = "Operation result: " + operationResult;
