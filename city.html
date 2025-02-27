@@ -3,6 +3,12 @@
     <head>
         <title>SimpleCity. City game by Thomas Lowe</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            .image-container img {
+                width: 150px;
+                height: 150px;
+            }
+        </style>
     </head>
  
 <body>
@@ -27,6 +33,7 @@
 
     let oops = 0;
     let found = 0;
+    let usePic = 1;
 
 function checkCity ()
 {
@@ -44,55 +51,33 @@ function checkCity ()
         oops++
         alert("awww...");
     }
+}
+    //Did this save?
 
     document.getElementById("result").innerHTML = `Oops: ${oops}, Found: ${found}`;
 
-    let img = document.getElementById("cat-1151519_1280.jpg")
-    let value1 = document.getElementById("bird-3689510_1280.jpg")
-    let value2 = document,getElementById("weasel-3352109_1280.jpg")
-    var usePick = value1
-    
-    img.onclick = function updatePic(img) 
-    {
-        /*      
-        My first attempt at wrting a function to change the picture. Kept mostly for refrence purposes.
-        image = img
-        let imageCollection = [img, value1, value2]
-        for (i = 0; i<imageCollection.length; i++)
-        {
-            image = i
-        } 
-            
-        After this didn't work, I went back and read the instructions.
-        */
-       switch (usePick) 
-       {
-        case value1:
-            
-            img = document.getElementById("bird-3689510_1280.jpg")
-            
-
-            break;
-        
-       
-        default:
-
-            break;
-        case value2:arguments
-       }
-
-        
+    function updatePic() {
+        const img = document.getElementById("pet-image");
+        switch (usePic) {
+            case 1:
+                img.src = "cat-1151519_1280.jpg";
+                usePic = 2;
+                break;
+            case 2:
+                img.src = "bird-3689510_1280.jpg";
+                usePic = 3;
+                break;
+            case 3:
+                img.src = "weasel-3352109_1280.jpg";
+                usePic = 1;
+                break;
+        }
     }
-    
-
-
-}
 </script>
 
-<div>
-    <img src="cat-1151519_1280.jpg" alt="A cat">
-    
+<div class="image-container">
+    <img id="pet-image" src="cat-1151519_1280.jpg" alt="A pet" onclick="updatePic()">
 </div>
 
 </body>
-</html> 
+</html>
