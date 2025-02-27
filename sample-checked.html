@@ -72,6 +72,28 @@ function resolveRadio() {
     }
 }
 
+function chooseOp() 
+    {
+    let basicPrice = parseFloat(document.getElementById("basicprice").value);
+    let breakAt = parseInt(document.getElementById("breakAt").value);
+    let operationResult = "";
+
+    if (document.getElementById("product").checked) 
+        {
+            operationResult = `${basicPrice} * ${breakAt} = ${basicPrice * breakAt}`;
+        } 
+        else if (document.getElementById("sum").checked) 
+        {
+            operationResult = `${basicPrice} + ${breakAt} = ${basicPrice + breakAt}`;
+        } 
+        else if (document.getElementById("mod").checked) 
+        {
+            operationResult = `${basicPrice} % ${breakAt} = ${basicPrice % breakAt}`;
+        }
+
+    document.getElementById("operationResult").innerHTML = "Operation result: " + operationResult;
+    }
+
 </script>
 
 </body>
