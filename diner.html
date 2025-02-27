@@ -31,7 +31,7 @@
     <label for="dessert">Enter dessert: </label>
     <input type="text" id="dessert" name="dessert"> <br>
 
-    <input type="button" onclick="updateDinner()" value="Update Dinner Plan">
+    <input type="button" onclick="updateDinner()" value="Update the dinner">
 </form>
 
 <p id="dinnerResult">Dinner details will be displayed here</p>
@@ -53,11 +53,16 @@ function choices()
 
 function updateDinner()
 {
-    let guests = document.getElementById("guests").value;
-    let location = document.getElementById("location").value;
+    // Get the values from input elements
+    let mainDishValue = document.getElementById("mainDish").value;
+    let dessertValue = document.getElementById("dessert").value;
     
-    let result = `Planning dinner for ${guests} guests at ${location}`;
-    document.getElementById("dinnerResult").innerHTML = result;
+    // Set properties of my_dinner
+    my_dinner["main"] = mainDishValue;
+    my_dinner["dessert"] = dessertValue;
+    
+    // Replace innerHTML with my_dinner
+    document.getElementById("dinnerResult").innerHTML = JSON.stringify(my_dinner);
 }
 
 </script>
