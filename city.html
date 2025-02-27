@@ -35,30 +35,32 @@
     let found = 0;
     let usePic = 1;
 
-function checkCity ()
-{
-//Do you know how much I hate string refrences? Probably not, but they are the bane of my existence. Especially without auto complte. Typo in 'complete' left in to demonstrate point
-    const secret = "San Diego"
-    let guess = document.getElementById("city_guess").value;
-    if (guess === secret)
+    function checkCity ()
     {
-        found++;
-        alert("GotCha!");
+    //Do you know how much I hate string refrences? Probably not, but they are the bane of my existence. Especially without auto complte. Typo in 'complete' left in to demonstrate point
+        const secret = "San Diego"
+        let guess = document.getElementById("city_guess").value;
+        if (guess === secret)
+        {
+            found++;
+            alert("GotCha!");
 
+        }
+        else
+        {
+            oops++
+            alert("awww...");
+        }
     }
-    else
-    {
-        oops++
-        alert("awww...");
-    }
-}
     //Did this save? Still not sure.
 
     document.getElementById("result").innerHTML = `Oops: ${oops}, Found: ${found}`;
 
-    function updatePic() {
+    function updatePic() 
+    {
         const img = document.getElementById("pet-image");
-        switch (usePic) {
+        switch (usePic) 
+        {
             case 1:
                 img.src = "cat-1151519_1280.jpg";
                 usePic = 2;
