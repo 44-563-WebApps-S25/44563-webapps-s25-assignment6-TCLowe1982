@@ -3,5 +3,11 @@
 Introduction to Java Script and DOM
 
 Hosted at [GitHub](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-TCLowe1982/)
+
 All pages are availible from the index page.
 
+
+Direct links follow:
+[Road Trip Planner](road-trip.html)
+[Tax Brackets](tax.html)
+[Villans and Trees](villans.html)
