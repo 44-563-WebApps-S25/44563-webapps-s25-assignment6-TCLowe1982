@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Progressive Tax Table</title>
+</head>
+
+<body>
+
+<h2>Thomas Lowe tax table computation</h2>
+
+<form>
+    <label for="income">Enter income</label>
+    <input type="number" id="income" value="5000"> <br>
+
+    <label for="baseRate">Enter the base tax rate</label>
+    <input type="number" id="baseRate" value="0.05"> <br>
+
+    <label for="cutoff">Enter the cut off</label>
+    <input type="number" id="cutoff" value="7500"> <br>
+
+    <label for="extRate">Enter the extended rate</label>
+    <input type="number" id="extRate" value="0.15"> <br>
+
+    <input type="button" onclick="doTax()" value="Show tax table">
+</form>
+
+<p id="result"></p>
+
+<script>
+
+function doTax() {
+    var income = parseFloat(document.getElementById("income").value);
+    var cutoff = parseFloat(document.getElementById("cutoff").value);
+    var baseRate = parseFloat(document.getElementById("baseRate").value);
+    var extRate = parseFloat(document.getElementById("extRate").value);
+
+    var taxTable = "";
+
+    for (var i = 1; i <= 5; i++) {
+        var incomeLevel = i * income;
+        var calculatedTax;
+
+        if (incomeLevel <= cutoff) {
+            calculatedTax = incomeLevel * baseRate;
+        } else {
+            calculatedTax = (cutoff * baseRate) + ((incomeLevel - cutoff) * extRate);
+        }
+
+        taxTable += incomeLevel + " tax is " + calculatedTax + "; ";
+    }
+
+    document.getElementById("result").innerHTML = "Taxes are: " + taxTable;
+}
+
+</script>
+
+</body>
+</html>
