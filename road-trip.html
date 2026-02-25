@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
- 
+
+<head>
+    <title>Thomas Lowe's Travel Planner</title>
+</head>
+
 <body>
 
 <h2>Thomas Lowe's Travel Planner</h2>
@@ -21,6 +25,18 @@
 <p id="cruise_result"></p>
 
 <form>
+    <label for="start_city">Enter starting city </label>
+    <input type="text" id="start_city" value="Athens"> <br>
+
+    <label for="end_city">Enter ending city </label>
+    <input type="text" id="end_city"> <br>
+
+    <button onclick="updateTrip()">Update the trip</button>
+</form>
+
+<p id="trip_result"></p>
+
+<!-- <form>
     <label for="form1_age">What is your age </label>
     <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
 
@@ -32,6 +48,7 @@
 
 
 <p id="result">This text will be replaced </p>
+ -->
 
 <script>
 
@@ -45,7 +62,15 @@ function choices() {
     document.getElementById("cruise_result").innerHTML = "Caribbean: " + my_trip.cari + ", Mediterranean: " + my_trip.medi + ", Baltic: " + my_trip.balt;
 }
 
-function resolveForm (){
+function updateTrip() {
+    var startCity = document.getElementById("start_city").value;
+    var endCity = document.getElementById("end_city").value;
+    my_trip["startCity"] = startCity;
+    my_trip["endCity"] = endCity;
+    document.getElementById("trip_result").innerHTML = "Start: " + my_trip.startCity + ", End: " + my_trip.endCity;
+}
+
+/* function resolveForm (){
     console.log("Getting form values")
     age = document.getElementById("form1_age").value
     nick = document.getElementById("form1_nick").value
@@ -57,7 +82,7 @@ function resolveForm (){
     } else {
         out.innerHTML = "Values were not confirmed"
     }
-}
+} */
 </script>
 
 </body>
