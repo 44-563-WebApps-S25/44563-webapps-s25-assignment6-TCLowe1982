@@ -9,5 +9,5 @@ All pages are availible from the index page.
 
 Direct links follow:
 [Road Trip Planner](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-TCLowe1982/road-trip.html)
-[Tax Brackets](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-TCLowe1982/villans.html)
-[Villans and Trees](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-TCLowe1982/tax.html)
+[Villans and TreesT](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-TCLowe1982/villans.html)
+[ax Brackets](https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-TCLowe1982/tax.html)
